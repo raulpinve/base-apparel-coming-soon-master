@@ -104,7 +104,7 @@ body{
     border-radius: 2em;
     height: 50px;
     padding-left: 1.5em;
-    border: 1px solid var(--desaturatedRed);
+    border: 1px solid #d2d2d2;
     opacity: 1;
     font-size: .8em;
     font-family: 'Josefin Sans', sans-serif;
@@ -197,12 +197,15 @@ body{
         font-size: 1.1em;
     }
     .card-body-description-form input{
-        height: 50px;
+        border-radius: 30px;
+        height: 60px;
         font-size: 1em;
     }
 
     .card-body-description-form button{
+        border-radius: 30px;
         width: 105px;
+        height: 60px;
     }
 }
 
