@@ -194,7 +194,10 @@ body{
     }
     .card-body-description-text{
         text-align: left;
-        font-size: 1.1em;
+        font-size: 1em;
+    }
+    .card-body-description-form{
+        padding-right: 1em;
     }
     .card-body-description-form input{
         border-radius: 30px;
