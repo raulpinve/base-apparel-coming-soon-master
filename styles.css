@@ -1,0 +1,217 @@
+
+/* Globals */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* Colors */
+
+    /* Primary */
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+
+    /* Neutral */
+    --darkGrayishRed: hsl(0, 6%, 24%);
+
+    /* Gradients  */
+    --gradientLight : linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --gradientStrong : linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+
+}   
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+/* Card  */
+
+.card{
+    height: 100vh;
+    background: var(--gradientLight);
+}
+  
+
+/* Card header */
+.card-header-mobile{
+    padding: 1.5em;
+    background: white;
+}
+.card-header-desktop{
+    display: none;
+}
+.card-header-logo{
+    width: 100px;
+}
+
+/* Card body */
+.card-img-mobile{
+    background-image: url('images/hero-mobile.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+}
+
+/* Card description  */
+
+.card-body-description{
+    padding: 2.5em;
+}
+
+/* Card description title  */
+.card-body-description-title{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2.1em;
+    text-align: center;
+    width: 225px;
+    letter-spacing: .3em;
+    margin: auto;
+    line-height: 1.2;
+
+}
+.card-body-description-title-we{
+    font-weight: 300;    
+    color: var(--desaturatedRed);
+}
+.card-body-description-text{
+    color: var(--desaturatedRed);
+    font-size: .85em;
+    text-align: center;
+    margin-top: 1.4em;
+    line-height: 1.5;
+}
+
+/* Card description form */
+.card-body-description-form{
+    margin-top: 3em;
+}
+
+/* Card description input */
+.card-body-description-form{
+    display: grid;
+    grid-template-columns: 1fr 0px;
+}
+.card-body-description-form input{
+    width: 100%;
+    background: transparent;
+    border-radius: 2em;
+    height: 50px;
+    padding-left: 1.5em;
+    border: 1px solid var(--desaturatedRed);
+    opacity: 1;
+    font-size: .8em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.card-body-description-form input::placeholder{    
+    color: var(--desaturatedRed);
+    opacity: 0.6;
+}
+.card-body-description-form button{
+    position: relative;
+    width: 65px;
+    right: 65px;
+    border-radius: 2em;
+    border: none;
+    background: var(--gradientStrong);
+}
+
+.text-alarm{
+    color: var(--gradientStrong);
+    font-size: .8em;
+    color: var(--softRed);
+    margin-top: .7em;
+    padding-left: 2em;
+    display: none;
+}
+.text-alarm-icon{
+    border: 2px solid var(--softRed) !important;
+    background-image: url("images/icon-error.svg") !important;
+    background-position: calc(100% - 70px) !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Media querys */
+
+@media screen and (min-width: 375px){
+    .card{
+        width: 375px;
+        margin: auto;
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+
+    .card{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 611px;
+        margin: 0;
+    }
+    .card-header-logo{
+        width: 10em;
+    }
+    .card-body{
+        padding: 5em 12em;
+        background-image: url('images/bg-pattern-desktop.svg');
+    }
+
+    .card-header-mobile{
+        display: none;
+    }
+    .card-header-desktop{
+        display: block;
+    }
+    .card-img-mobile{
+        display: none;
+    }        
+    .card-img-desktop{
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        grid-column: 2;
+        grid-row: 1;
+        background-image: url('images/hero-desktop.jpg');
+        height: 100%;
+    }
+    .card-body-description{
+        padding: 0;
+    }
+   
+    .card-body-description-title{
+        text-align: left;
+        width: 370px;
+        margin: 0;
+        font-size: 3.5em;
+        padding-top: 2em;
+    }
+    .card-body-description-text{
+        text-align: left;
+        font-size: 1.1em;
+    }
+    .card-body-description-form input{
+        height: 50px;
+        font-size: 1em;
+    }
+
+    .card-body-description-form button{
+        width: 105px;
+    }
+}
+
+@media screen and (min-width: 1800px){
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-body{
+        padding: 7em 12em;
+    }
+}
